@@ -135,6 +135,7 @@ HomeComponent.prototype.editGridSize = function (inc) {
   this.setState({
     gridSize: Math.max(3, this.state.gridSize + inc),
     grid: this.initializeGrid(Math.max(3, this.state.gridSize + inc)),
+    currentPlayer:true,
     end: false
   });
 };
@@ -170,6 +171,7 @@ HomeComponent.prototype.reset = function () {
 
   this.setState({
     grid: this.initializeGrid(this.state.gridSize),
+    currentPlayer:true,
     end: false
   });
 };
